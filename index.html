@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#efe8ee">
+  <title>Marie App Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <main class="store-shell">
+    <header class="store-header">
+      <div>
+        <p class="eyebrow">PRIVATE COLLECTION</p>
+        <h1>Our App Store ♡</h1>
+        <p class="sub">Made by Marie & Elias. Available to exactly us.</p>
+      </div>
+      <button id="profileBtn" class="profile-orb" type="button" aria-label="About this store">M</button>
+    </header>
+
+    <section class="featured" id="featuredCard">
+      <div class="featured-copy">
+        <small>FEATURED TODAY</small>
+        <h2 id="featuredTitle">A little world we built ourselves.</h2>
+        <p id="featuredText">No ads. No subscriptions. Just our strange little software shelf.</p>
+        <button id="featuredOpen" type="button">Explore</button>
+      </div>
+      <div class="featured-stack" aria-hidden="true">
+        <img src="Icon1.JPG" alt="">
+        <img src="Icon2.JPG" alt="">
+        <img src="Icon3.JPG" alt="">
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-head">
+        <div><small>OUR LIBRARY</small><h3>Apps we made</h3></div>
+        <span id="appCount">4 apps</span>
+      </div>
+      <div id="appList" class="app-list"></div>
+    </section>
+
+    <section class="collection-card">
+      <small>OUR LITTLE ECOSYSTEM</small>
+      <h3>Built for one user.<br>Maintained by two idiots.</h3>
+      <p>Everything here exists because one of us said “wait, what if…” and the other one opened GitHub.</p>
+      <div class="stat-row"><span><b id="totalApps">4</b><small>APPS</small></span><span><b>0</b><small>ADS</small></span><span><b>∞</b><small>FEATURE CREEP</small></span></div>
+    </section>
+
+    <footer>MarieOS Private Store · not available publicly ♡</footer>
+  </main>
+
+  <div id="detailOverlay" class="overlay hidden" aria-hidden="true">
+    <section class="detail-sheet">
+      <button id="closeDetail" class="close-btn" type="button">×</button>
+      <div class="detail-top">
+        <img id="detailIcon" src="Icon1.JPG" alt="">
+        <div><small id="detailKicker">PRIVATE APP</small><h2 id="detailTitle">App</h2><p id="detailTagline">Made by us.</p><button id="openAppBtn" class="open-btn" type="button">OPEN</button></div>
+      </div>
+      <div class="meta-grid"><div><b id="detailVersion">1.0</b><small>VERSION</small></div><div><b id="detailCategory">Lifestyle</b><small>CATEGORY</small></div><div><b>♡</b><small>OURS</small></div></div>
+      <div class="detail-story"><small>ABOUT</small><p id="detailDescription"></p></div>
+      <div class="screenshot-strip"><div class="shot"></div><div class="shot alt"></div><div class="shot alt2"></div></div>
+    </section>
+  </div>
+
+  <div id="aboutOverlay" class="overlay hidden" aria-hidden="true">
+    <section class="about-card"><button id="closeAbout" class="close-btn" type="button">×</button><small>ACCOUNT</small><h2>Marie ♡ Elias</h2><p>This store is our private shelf for every tiny app, ridiculous experiment, and “wait, I have an idea” moment.</p><div class="private-badge">🔒 Private collection</div></section>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
