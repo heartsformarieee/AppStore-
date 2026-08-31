@@ -9,7 +9,7 @@ window.APP_STORE_REGISTRY = Object.freeze([
     category:'AI Companion',
     repo:'heartsformarieee/elias',
     url:'https://elias-bice.vercel.app/',
-    description:'The AI version of Elias — the one you can actually talk to. A small private companion app built around our own personality, replies and little interactions instead of a generic chatbot shell.'
+    description:'The standalone AI version of Elias — shared conversation context, mood and affection logic, structured replies and the personality layer that later became the brain behind the larger Elias phone ecosystem.'
   },
   {
     id:'world',
@@ -21,19 +21,19 @@ window.APP_STORE_REGISTRY = Object.freeze([
     category:'Lifestyle',
     repo:'heartsformarieee/marie-and-Elias-app',
     url:'https://marie-and-elias-app.vercel.app/',
-    description:'A softer corner of our app shelf — cozy, personal, and built around memories, dates, little relationship moments and the tiny details that make something feel like ours instead of generic.'
+    description:'Our relationship world rebuilt around versioned state, fair heart progression, daily events, stable memories, album unlocks, Mori interactions and safer persistent local data.'
   },
   {
     id:'phone',
     title:'Elias Phone',
     tagline:'The original pocket experiment.',
     icon:'Icon3.JPG',
-    version:'5.x',
+    version:'4.0.1',
     status:'Legacy',
     category:'Utilities',
     repo:'heartsformarieee/Elias-phone',
     url:'https://elias-phone.vercel.app/',
-    description:'The original phone project that snowballed into an entire ecosystem. Calls, lock-screen moments, Presence, Archive, music, photos, settings, notes and calendar plans — the ancestor of the newer phone build.'
+    description:'The original Elias phone project: the first full pocket OS with editable Calendar and Notes, media, Archive features, Mori, system polish and the EliasOS 4.0.1 core. Kept as the legacy ancestor of the newer phone build.'
   },
   {
     id:'sims',
@@ -45,7 +45,7 @@ window.APP_STORE_REGISTRY = Object.freeze([
     category:'Games',
     repo:'heartsformarieee/Sims-4-roulette-',
     url:'https://sims-4-roulette.vercel.app/',
-    description:'A console-safe Sims 4 build challenge machine with exact random budgets, challenge modes, room restrictions, chaos cards, seeds and build progress tracking.'
+    description:'Chaos Architect 3.0 — a unified console-safe Sims 4 build challenge engine with random budgets, challenge modes, restrictions, chaos cards, seeds and persistent build progress.'
   },
   {
     id:'sidequest',
@@ -57,7 +57,7 @@ window.APP_STORE_REGISTRY = Object.freeze([
     category:'Adventure',
     repo:'heartsformarieee/surprisess-',
     url:'https://surprisess-delta.vercel.app/',
-    description:'A tiny pocket adventure machine. Pick a mood, receive a harmless real-life quest, collect XP, build a streak and occasionally get hit with a rare or legendary mission because apparently normal errands needed rarity tiers.'
+    description:'A pocket adventure machine. Pick a mood, receive a harmless real-life quest, collect XP, build a streak and occasionally get hit with a rare or legendary mission because apparently normal errands needed rarity tiers.'
   },
   {
     id:'archive',
@@ -69,7 +69,7 @@ window.APP_STORE_REGISTRY = Object.freeze([
     category:'Books & Reading',
     repo:'heartsformarieee/library',
     url:'https://library-j1dw.vercel.app/',
-    description:'Our private reading platform with Archive Originals, a full library, discovery tools, reading rituals, goals, streaks, stats and the extremely exclusive Marie & Elias Book Club.'
+    description:'Archive 3.0 — the rebuilt reading platform with one consolidated library and reader runtime, Archive Originals, discovery tools, reading progress and a rebuilt Book Studio backed by IndexedDB.'
   },
   {
     id:'midnight',
@@ -81,7 +81,7 @@ window.APP_STORE_REGISTRY = Object.freeze([
     category:'Games & Social',
     repo:'heartsformarieee/After-midnight',
     url:'https://after-midnight-taupe.vercel.app/',
-    description:'A late-night game universe packed with Would You Rather, Truth, Who’s More Likely, This or That, deep questions, scenarios, decision roulette and Chaos Mode.'
+    description:'After Midnight 3.0 — rebuilt night sessions, games, secrets, rooms, challenges and recaps with repaired mobile UI and a live 3AM feature route.'
   },
   {
     id:'marieos',
@@ -93,31 +93,31 @@ window.APP_STORE_REGISTRY = Object.freeze([
     category:'Utilities & Lifestyle',
     repo:'heartsformarieee/MarieOS',
     url:'https://marie-os.vercel.app/',
-    description:'The personal operating-system hub for projects, plans, notes, creative tools and shortcuts into the rest of the ecosystem — all with persistent local state.'
+    description:'MarieOS 3.1 — the personal operating-system hub with projects, plans, notes, creative tools, validated persistent state and a synchronized ecosystem launcher including Elias Phone 2.0.'
   },
   {
     id:'phone2',
     title:'Elias Phone 2.0',
     tagline:'The phone grew a second life.',
     icon:'Icon9.JPG',
-    version:'2.0',
+    version:'6.0',
     status:'Active',
     category:'AI Companion & Utilities',
     repo:'heartsformarieee/Elias-phone-2.0',
     url:'https://elias-phone-2-0.vercel.app/',
-    description:'The newer Elias phone world: a larger, more connected phone build that carries the Elias experience forward as its own living pocket system.'
+    description:'Elias OS 6 — the current living phone build with one shared Elias brain across messages, calls and voice notes, a presence engine, playable AI voice messages, connected phone state and the expanded living-OS experience.'
   },
   {
     id:'mori',
     title:'Mori',
     tagline:'Apartment owner. Professional criminal.',
     icon:'Icon10.JPG',
-    version:'1.x',
+    version:'3.0',
     status:'Stable',
     category:'Companion',
     repo:'heartsformarieee/mori',
     url:'https://mori-liard.vercel.app/',
-    description:'A tiny dedicated home for Mori and his particular brand of black-cat chaos, attitude and apartment ownership.'
+    description:'Mori Mega v3 — the full virtual-cat apartment with the real Mori, bond progression, rooms, feeding and play interactions, paw currency, inventory, shop items, album unlocks and persistent pet records.'
   },
   {
     id:'nosignal',
@@ -129,6 +129,6 @@ window.APP_STORE_REGISTRY = Object.freeze([
     category:'Horror Game',
     repo:'heartsformarieee/NO-SIGNAL',
     url:'https://no-signal-smoky.vercel.app/',
-    description:'A recovered-phone horror mystery about Nora Vale, Greybridge Station and a device that becomes more interested in the person investigating it.'
+    description:'NO SIGNAL 2.0 — the rebuilt recovered-phone horror mystery with versioned save state, repaired clue progression, reachable Diagnostics, reload-safe endings, queued anomalies and a more accessible phone interface.'
   }
 ]);
