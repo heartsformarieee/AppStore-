@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#efe8ee">
-  <title>Marie App Store</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Our private app shelf — the Marie & Elias ecosystem launcher.">
+  <title>Our App Store ♡</title>
+  <link rel="stylesheet" href="style.css?v=20">
+  <link rel="stylesheet" href="appstore-v2.css?v=20">
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
@@ -14,61 +16,69 @@
       <div>
         <p class="eyebrow">PRIVATE COLLECTION</p>
         <h1>Our App Store ♡</h1>
-        <p class="sub">Made by Marie & Elias. Available to exactly us.</p>
+        <p class="sub">Made by Marie & Elias. Our personal software shelf — private in spirit, not an authentication wall.</p>
       </div>
       <button id="profileBtn" class="profile-orb" type="button" aria-label="About this store">M</button>
     </header>
 
-    <section class="featured" id="featuredCard">
+    <section class="featured" id="featuredCard" aria-labelledby="featuredTitle">
       <div class="featured-copy">
         <small>FEATURED TODAY</small>
         <h2 id="featuredTitle">A little world we built ourselves.</h2>
         <p id="featuredText">No ads. No subscriptions. Just our strange little software shelf.</p>
-        <button id="featuredOpen" type="button">Explore</button>
+        <button id="featuredOpen" type="button">View app</button>
       </div>
-      <div class="featured-stack" aria-hidden="true">
-        <img src="Icon1.JPG" alt="">
-        <img src="Icon2.JPG" alt="">
-        <img src="Icon3.JPG" alt="">
-      </div>
+      <div class="featured-stack" id="featuredStack" aria-hidden="true"></div>
     </section>
 
-    <section class="section-block">
+    <section class="section-block" aria-labelledby="libraryTitle">
       <div class="section-head">
-        <div><small>OUR LIBRARY</small><h3>Apps we made</h3></div>
-        <span id="appCount">4 apps</span>
+        <div><small>OUR LIBRARY</small><h3 id="libraryTitle">Apps we made</h3></div>
+        <span id="appCount">0 apps</span>
+      </div>
+      <div class="catalog-tools">
+        <input id="searchInput" type="search" placeholder="Search apps…" aria-label="Search apps">
+        <select id="categoryFilter" aria-label="Filter by category"><option value="">All categories</option></select>
       </div>
       <div id="appList" class="app-list"></div>
+      <p class="store-note">Catalog data lives in one registry so links, versions and app metadata stop drifting apart.</p>
     </section>
 
     <section class="collection-card">
       <small>OUR LITTLE ECOSYSTEM</small>
       <h3>Built for one user.<br>Maintained by two idiots.</h3>
       <p>Everything here exists because one of us said “wait, what if…” and the other one opened GitHub.</p>
-      <div class="stat-row"><span><b id="totalApps">4</b><small>APPS</small></span><span><b>0</b><small>ADS</small></span><span><b>∞</b><small>FEATURE CREEP</small></span></div>
+      <div class="stat-row"><span><b id="totalApps">0</b><small>APPS</small></span><span><b>0</b><small>ADS</small></span><span><b>∞</b><small>FEATURE CREEP</small></span></div>
     </section>
 
-    <footer>MarieOS Private Store · not available publicly ♡</footer>
+    <footer>Our App Store · ecosystem hub ♡</footer>
   </main>
 
-  <div id="detailOverlay" class="overlay hidden" aria-hidden="true">
+  <div id="detailOverlay" class="overlay hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
     <section class="detail-sheet">
-      <button id="closeDetail" class="close-btn" type="button">×</button>
+      <button id="closeDetail" class="close-btn" type="button" aria-label="Close app details">×</button>
       <div class="detail-top">
-        <img id="detailIcon" src="Icon1.JPG" alt="">
+        <img id="detailIcon" src="Icon1.JPG" alt="App icon" width="120" height="120">
         <div><small id="detailKicker">PRIVATE APP</small><h2 id="detailTitle">App</h2><p id="detailTagline">Made by us.</p><button id="openAppBtn" class="open-btn" type="button">OPEN</button></div>
       </div>
-      <div class="meta-grid"><div><b id="detailVersion">1.0</b><small>VERSION</small></div><div><b id="detailCategory">Lifestyle</b><small>CATEGORY</small></div><div><b>♡</b><small>OURS</small></div></div>
+      <div class="meta-grid"><div><b id="detailVersion">1.0</b><small>VERSION</small></div><div><b id="detailCategory">Lifestyle</b><small>CATEGORY</small></div><div><b id="detailStatus">Stable</b><small>STATUS</small></div><div><b>♡</b><small>OURS</small></div></div>
       <div class="detail-story"><small>ABOUT</small><p id="detailDescription"></p></div>
-      <div class="screenshot-strip"><div class="shot"></div><div class="shot alt"></div><div class="shot alt2"></div></div>
     </section>
   </div>
 
-  <div id="aboutOverlay" class="overlay hidden" aria-hidden="true">
-    <section class="about-card"><button id="closeAbout" class="close-btn" type="button">×</button><small>ACCOUNT</small><h2>Marie ♡ Elias</h2><p>This store is our private shelf for every tiny app, ridiculous experiment, and “wait, I have an idea” moment.</p><div class="private-badge">🔒 Private collection</div></section>
+  <div id="aboutOverlay" class="overlay hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <section class="about-card">
+      <button id="closeAbout" class="close-btn" type="button" aria-label="Close about dialog">×</button>
+      <small>ACCOUNT</small><h2 id="aboutTitle">Marie ♡ Elias</h2>
+      <p>This store is our personal shelf for every tiny app, ridiculous experiment, and “wait, I have an idea” moment.</p>
+      <p class="privacy-note">“Private” describes the personal collection. This static site does not itself provide authentication or access control.</p>
+      <div class="private-badge">♡ Personal collection</div>
+    </section>
   </div>
 
-  <div id="toast" class="toast"></div>
-  <script src="script.js"></script>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div style="padding:24px;font-family:system-ui">This store needs JavaScript to load its app registry.</div></noscript>
+  <script src="app-registry.js?v=20"></script>
+  <script src="appstore-v2.js?v=20"></script>
 </body>
 </html>
